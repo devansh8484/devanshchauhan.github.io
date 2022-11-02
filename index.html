@@ -5,319 +5,127 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devansh Chauhan</title>
+    <title>Document</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(22, 59, 158);
+    padding: 20px;
+}
+.weather-card{
+    background-color: #ffffff22;
+    height: auto;
+    margin: auto;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    display:inline-grid;
+    grid-template-columns: 1fr 1fr;
+}
+.weather-card .icon img{
+    width: 70px;
+ }
+ .weather-card .temp {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+ }
+ .weather-card .temp .uil{
+    font-size: 1.5rem;
+    position: relative;
+    top: -3px ;
+ }
+ .weather-card .details{
+    margin-left: 10px;
+    grid-column: span 2;
+ }
+/*
+NbKdLDIvbtj4GkAv4eKcP8CHctYhVin4
+*/
+    </style>
 </head>
 
 <body>
-    <div class="loader">
-        
+    <div class="weather-card">
+        <div class="icon">
+        <img id="weather-icon" src="https://developer.accuweather.com/sites/default/files/02-s.png" alt="weather-icon">
+        </div>
+        <div class="temp"> <span id="value">28</span> <i class="uil uil-celsius"></i></div>
+        <div class="details">
+        <div class="place">
+            Place Name
+        </div>
+        <div class="weather-text">
+            Sunshine
+        </div>
     </div>
-    <section class="header" id="header">
-        <div class="container">
-            <div class="row">
-                <div class="logo">Devansh</div>
-                <div class="nav">
-                    <ul>
-                        <button class="close-btn"><i class="uil uil-times"></i></button>
-                        <li><a href="#home" class="active">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#skills">Resume</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact" class="button">contact</a></li>
+    </div>
 
-                    </ul>
-                </div>
-                <div class="toggle">
-                    <button class="toggle-btn button">
-                        <i class="uil uil-draggabledots"></i> </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="home" id="home">
-        <div class="container">
-            <div class="i-left">
-                <span>Hy! I Am</span>
-                <span>Devansh Chauhan</span>
-                <span>I create stunning websites for your business,Heighly experienced in web design and development.
-                </span>
-                <a href="#contact" class="button">Hire me</a>
-                <div class="i-icons">
-                    <a href="https://www.youtube.com/channel/UCbIP71-K34pVLsRRACpeAqA"><i class="uil uil-youtube"></i></a>
-                    <a href="https://www.instagram.com/"><i class="uil uil-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/devansh-chauhan-87348323b/"> <i class="uil uil-linkedin"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="i-right">
-                <div class="admin-img" data-aos="zoom-in" >
-                    <img src="images/banner-new-2.png" alt="">
-                    <div class="web-dev">
-                        <img src="images/crown.png" alt="">
-                        <p>Web Designer</p>
-                    </div>
-                    <div class="complete">
-                        <img src="images/thumbup.png" alt="">
-                        <p>75+ Projects</p>
-                    </div>
+    
+    <div id="demo"></div>
+</body>
+<script>
+var x = document.getElementById("demo");
+let place = document.querySelector(".place");
+let weather_text = document.querySelector(".weather-text");
 
-                </div>
-                <div class="blur-purple"></div>
-            </div>
-            <div class="blur-blue"></div>
-        </div>
-    </section>
-    <section class="services" id="services">
-        <div class="container">
-            <div class="i-left">
-                <span>My awesome</span>
-                <span>services</span>
-                <span>I create stunning websites for your business,Heighly experienced in web design and development.
-                </span>
-                <a href="resume.pdf" class="button" download>Downlaod CV</a>
-            </div>
-            <div class="cards">
-                <div class="servicecard-container">
-                    <div class="box1" data-aos="fade-up">
-                        <div class="card">
-                            <i class="uil uil-palette"></i>
-                            <h3>Graphics</h3>
-                            <p>Adobe Illustrator, Adobe Photoshop, Canva, Figma</p>
-                        </div>
-                    </div>
-                    <div class="box2" data-aos="fade-right">
-                        <div class="card">
-                            <i class="uil uil-web-grid"></i>
-                            <h3>Web Designing</h3>
-                            <p>HTML, CSS, JavaScript, Bootstrap , React.js</p>
-                        </div>
-                    </div>
-                    <div class="box3" data-aos="fade-left">
-                        <div class="card">
-                            <i class="uil uikit"></i>
-                            <h3>Web Development</h3>
-                            <p class="hide">PHP, Node.js , MongoDB</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="blur-blue"></div>
-    </section>
-    <section class="skills" id="skills">
-        <div class="container">
-            <div class="row">
-                <span>My</span>
-                <span>Skills</span>
-            </div>
-            <div class="row">
-                <div class="skills-data grid-box">
-                    <div class="grid-item education" data-aos="fade-down">
-                        <h5 class="tag">Education</h5>
-                        <div class="card">
-                            <small>2014-2017</small>
-                            <span class="course">BCA(Graduation)</span>
-                            <span class="institute">- CCS University,Meerut,UP</span>
-                        </div>
-                        <div class="card">
-                            <small>2015-2016</small>
-                            <span class="course">CCC(Diploma)</span>
-                            <span class="institute">- National Institute of Electronics & Information Technology</span>
-                        </div>
-                        <div class="card">
-                            <small>2013-2014</small>
-                            <span class="course">Intermediate</span>
-                            <span class="institute">- UP Board of Education</span>
-                        </div>
-                        <div class="blur-blue"></div>
-                    </div>
-                    <div class="grid-item skills" data-aos="fade-up">
-                        <h5 class="tag">Stack</h5>
-                        <div class="card">
-                            <small class="lang">
-                                <span>HTML</span>
-                                <span>97%</span>
-                            </small>
-                            <div class="range"></div>
-                        </div>
-                        <div class="card">
-                            <small class="lang">
-                                <span>CSS</span>
-                                <span>90%</span>
-                            </small>
-                            <span class="range"></span>
-                        </div>
-                        <div class="card">
-                            <small class="lang">
-                                <span>Bootstrap</span>
-                                <span>70%</span>
-                            </small>
-                            <span class="range"></span>
-                        </div>
-                        <div class="card">
-                            <small class="lang">
-                                <span>JavaScript</span>
-                                <span>86%</span>
-                            </small>
-                            <span class="range"></span>
-                        </div>
-                        <div class="blur-purple"></div>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition, showError);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
 
-                    </div>
-                    <div class="grid-item languages" data-aos="fade-down">
-                        <h5 class="tag">Languages</h5>
-                        <div>
-                            <div class="card">
-                                <div class="circle">
-                                    <svg>
-                                        <circle cx="40" cy="40" r="40">
-                                        </circle>
-                                        <circle cx="40" cy="40" r="40">
-                                        </circle>
-                                    </svg>
-                                    <div class="number">99%</div>
-                                </div>
-                                <h3>Hindi</h3>
-                            </div>
-                            <div class="card">
-                                <div class="circle">
-                                    <svg>
-                                        <circle cx="40" cy="40" r="40">
-                                        </circle>
-                                        <circle cx="40" cy="40" r="40">
-                                        </circle>
-                                    </svg>
-                                    <div class="number">75%</div>
-                                </div>
-                                <h3>English
-                                </h3>
-                            </div>
-                        </div>
-                        <div class="blur-blue"></div>
+function showPosition(position) {
+  lat = position.coords.latitude ;
+  long = position.coords.longitude;
+  getArea(lat , long);
+}
 
+function showError(error) {
+  switch(error.code) {
+    case error.PERMISSION_DENIED:
+      x.innerHTML = "User denied the request for Geolocation."
+      break;
+    case error.POSITION_UNAVAILABLE:
+      x.innerHTML = "Location information is unavailable."
+      break;
+    case error.TIMEOUT:
+      x.innerHTML = "The request to get user location timed out."
+      break;
+    case error.UNKNOWN_ERROR:
+      x.innerHTML = "An unknown error occurred."
+      break;
+  }
+}
+getLocation();
 
-                    </div>
+const getArea = (lat , long) => {
+    fetch("http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey=NbKdLDIvbtj4GkAv4eKcP8CHctYhVin4&q="+ lat + "%2C"+ long).then(response => response.json())
+  .then((json) => {
+    getCurrentWeather(json.Key);
+    let areaName =  json.LocalizedName;
+    let stateName = json.AdministrativeArea.ID;
+    place.innerHTML = areaName + "," + stateName;
+}).catch(error => x.innerHTML = "Location information is unavailable.");
+}
+let getCurrentWeather = (locationID) => {
+    fetch("http://dataservice.accuweather.com/currentconditions/v1/"+locationID+"?apikey=NbKdLDIvbtj4GkAv4eKcP8CHctYhVin4").then(response => response.json())
+  .then((json) => {
+    document.querySelector("#weather-icon").src="https://developer.accuweather.com/sites/default/files/0"+json[0].WeatherIcon+"-s.png";
+    weather_text.innerHTML = json[0].WeatherText;
+    document.querySelector(".temp #value").innerHTML =         json[0].Temperature.Metric.Value;
+    console.log(
+        json[0].Temperature.Metric.Value+"deg"+json[0].Temperature.Metric.Unit
+);
+  });
+}
 
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <span>Recent </span>
-                <span>Projects</span>
-            </div>
-            <div class="slide-show">
-                <div class="swiper mySwiper-1">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="images/project-1.webp" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/project-2.webp" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/project-3.webp" alt="">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="images/project-4.webp" alt="">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <div class="swiper-button-next">Next</div>
-                <div class="swiper-button-prev">Prev</div>
-            </div>
-
-        </div>
-    </section>
-    <section class="contact" id="contact">
-        <div class="container">
-            <div class="row">
-                <span>Contact </span>
-                <span>Me</span>
-            </div>
-            <div class="flex-box">
-                <div class="flex-item" data-aos="fade-up">
-                    <h3>Get in touch</h3>
-                    <div class="card">
-                        <i class="uil uil-envelope"></i>
-                        <div>
-                        <span>Email</span>
-                        <span>devansh8474@gmail.com</span>
-                        <a href="mailto:devansh8474@gmail.com">Write me</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <i class="uil uil-whatsapp"></i>       <div>               <span>Whatsapp</span>
-                        <span>+91-9456049194</span>
-                        <a href="https://api.whatsapp.com/send?phone=919456049194&text=Hello">Write me</a>
-                        </div>
-                    </div>
-                    <div class="blur-purple"></div>
-                </div>
-                <div class="flex-item" data-aos="fade-down">
-                    <h3>Write me your project!</h3>
-                    <form id="form" method="post" onsubmit="sendEmail()" autocomplete="off">
-                    <div class="input-box">
-                        <input type="text" name="uname" id="uname" maxlength="16" required>
-                        <label for="uname">Name</label>
-                    </div>
-                    <div class="input-box">
-                        <input type="email" name="email" id="email" maxlength="30" required>
-                        <label for="email">Email</label>
-                    </div>
-                    <div class="input-box">
-                        <textarea name="massege" id="massege" cols="20" rows="10" required></textarea>
-                        <label for="massege">Your project</label>
-                    </div>
-                    <div class="input-box">
-                         <input type="submit" onclick="sendEmail()" value="send"/>
-                    </div>
-                    </form>
-                    <div class="blur-blue"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="footer" id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="content grid-box">
-                    <div class="grid-item about">
-                        <h3>Devansh</h3>
-                        <small>Front end Developer</small><br>
-                        <a href="#services">About</a>
-                    </div>
-                    <div class="grid-item more">
-                        <h4>More</h4>
-                        <p><a href="#skills">Skills</a>
-                        <a href="#portfolio">Portfolio</a>
-                    <a href="#services">services</a></p>
-                    </div>
-                    <div class="grid-item follow">
-                        <h4>Follow</h4>
-                        <a href="https://www.instagram.com/the.devanshchauhan/" target="_blank"><i class="uil uil-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/devansh-chauhan-87348323b/" target="_blank"><i class="uil uil-linkedin"></i></a>
-                        <a href="https://www.youtube.com/channel/UCbIP71-K34pVLsRRACpeAqA" target="_blank"><i class="uil uil-youtube"></i></a>            
-                    </div>
-                    <div class="copyrights">
-                        <i class="uil uil-copyright"></i>
-                         2022 by <strong> Code2Learn</strong> All rights reserved.
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="app.js"></script>
-    </body>
+</script>
 </html>
